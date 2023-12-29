@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fdd870ea48.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: "Roboto", sans-serif;
+    }
+    nav{
+        background-color: white;
+        height: 11vh;
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav{
+        /* background-color:chartreuse; */
+        height:65px;
+        width: 94%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav ul{
+        display: flex;
+        gap:0.4vw;
+    }
+    .nav ul li{
+        list-style:none ;
+    }
+    a {
+        text-decoration: none;      
+    }
+    .container{
+        background-image:url("images/slider-bg.jpg");
+        background-size: cover;
+        height:calc(100vh - 11vh);
+        width: 100%;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+    }
+    .icon {
+        display: flex;
+        column-gap: 20px;
+    }
+    .icon i{
+        font-size: 2vmin;
+        color: #8019C8;
+    }
+    .nav ul li:nth-child(1) a{
+       background-color:#8019C8 ;
+       padding: 10px 20px;
+       color: white;
+       border-radius: 5px;
+    }
+    .nav ul li a{
+        font-size: 2.3vmin;
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+    .nav ul li a:hover{
+        background-color: #8019C8;
+        color: white;
+       border-radius: 5px;
+       transition: all 0.4s ease-in-out;
+    }
+    .nav span:nth-child(1){
+        font-size: 3.5vmin;
+        font-weight: 700;
+    }
+    .menu{
+        display: none;
+    }
+       /* ~~~~~~~~~~~~~~~~~~~~~~CSS FOR SECOND SECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+    .box{
+        height: 30vh;
+        width: 42vw;
+        /* border: 2px solid white; */
+        justify-content: center;
+        display: grid;
+        color: white;
+        align-items: center;
+        margin-left: 10%;
+        margin-bottom:4%;
+    }
+    .box h1{
+        font-size: 5vmin;        
+    }
+    .box p{
+        font-size: 2.7vmin;
+    }
+    .ctn{
+    padding: 1.5vmin 5vmin;
+    background-color: #19C880;
+    color:white;
+    border: none;
+    }
+    .box span{
+         display: flex;
+         column-gap: 5%;
+    }
+    .second{
+        display: flex;
+        /* border: 2px solid black; */
+        height: 240px;
+        align-items: center;
+        justify-content:space-around;
+        text-align: center;
+        line-height: 6vh;
+        flex-wrap: wrap;
+        background-color: #F5F5F5;
+    }
+    .second img{
+        filter: invert(1%);
+        /* filter: invert(11%) sepia(1%) saturate(100%) hue-rotate(1deg) brightness(1000%)contrast(800%); */
+        /* filter: hue-rotate(45deg); */
+    }
+    .feature{
+        /* border: 2px solid black; */
+        width: 25%;
+        height: 150px;
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~CSS FOR THIRD SECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+    .third{
+        display: flex;
+    }
+   
+   .img{
+      width: 55%;
+      height: 55vh;
+      /* border:10px solid black; */
+      justify-content: center;
+      display: flex;
+      
+    }
+    .img div:nth-child(2){
+        height: 100%;
+        /* border:2px solid brown; */
+    }
+    .img div:nth-child(2) img{
+        margin-top: 18vmin;
+    }
+    .img img{
+        width: 90%;
+        height: 35vh;
+    }
+    .content{
+        /* border:2px solid black; */
+        height:30vh;
+        display: grid;
+        width: 40%;
+        position: absolute;
+        bottom: 1vmin;
+    }
+    .content h1{
+        font-size: 5vmin;
+    }
+    .btn{
+        height: 5.5vh;
+        width: 150px;
+        background-color: #8019c8;
+        color: white;
+        border-radius: 3px;
+        border: none;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .third{
+        /* border: 2px solid black; */
+        height:60vh;
+        flex-wrap: wrap;
+       position: relative;
+   }
+   .third div:nth-child(2){
+        width: 45%;
+   }
+     /* ~~~~~~~~~~~~~~~~~~~~~~CSS FOR FOURTH SECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+
+     .sale-content{
+        display: flex;
+        width: 100%;
+        /* border: 1px solid black; */
+        justify-content: space-around;
+        text-align: center;
+        line-height: 30px;
+     }
+     .sale-watch{
+        height: 500px;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+     }
+     .sale{
+        width:400px;
+        height: 80%;
+        /* border: 2px solid aqua; */
+        display: grid;
+        place-items: center;
+        box-shadow: 2px 2px 2px 2wpx grey;
+        background-color: white;
+        padding-top:3vmin;
+     }
+     .sale-content i{
+         color:#E2BA1B;
+     }
+     .fourth{
+        background-color: #F5F5F5;
+        /* border:2px solid aqua; */
+        /* height: 75vh; */
+        height:550px
+     }
+     .btn-heading{
+         background-color: #19c880;
+         color:white;
+         border:none;
+         /* padding: 2vmin 3vmin; */
+         padding:14px 12px;
+         font-weight: bolder;
+         /* font-size: 1.5vmax; */
+         font-size: 22px;
+         margin-left: 22vmin;
+     }
+     .sale img{
+        height: 25vh;
+        /* border: 2px solid black; */
+     }
+     .sale-watch{
+        /* border:4px solid black; */
+        flex-wrap: wrap;   
+     }
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~CSS FOR FIVTH SECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+        .fivth{
+            width:100%;
+             /* border:10px solid black; */
+             height: 90vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+        }
+        .form{
+             width:45%;
+             /* border:2px solid black; */
+             display: grid;
+        }
+        .map{
+            /* border:2px solid blue;  */
+            width: 45%;
+            box-sizing: border-box;
+        }
+        .map iframe{
+            height:60vh;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .fivth-content{
+            /* border:2px solid aqua; */
+            /* width:75%; */
+            width: 1150px;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        .fiv-con-box{
+            /* border:2px solid brown; */
+            display: flex;
+            column-gap: 40px;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+        .fivth-content h1{
+            font-size: 30px;
+        }
+        .form input{
+             height: 50px;
+             width: 100%;
+             /* box-shadow: 2px 2px 3px 1px grey; */
+             box-shadow: 0px 0px 15px 0px lightgray;
+             border: none;
+             padding-left: 18px;
+        }
+        .form input::placeholder{
+            font-size: 16px;
+            color: #101010;
+        }
+
+            /* ~~~~~~~~~~~~~~~~~~~~~~CSS FOR SEVENTH SECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+            .seventh{
+                background-color: #0f1521;
+                color: white;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                /* border: 4px solid brown; */
+                /* padding: 50px; */
+            }
+            .sev-content{
+                display: flex;
+                /* border: 4px solid aqua; */
+                width: 78%;
+                justify-content: space-between;
+                height: 240px; 
+                flex-wrap: wrap;  
+            }
+            .sev-content div{
+                /* border:2px solid white; */
+                /* width: 220px; */
+                width: 20%;
+            }
+            .c3 div{
+               display: flex;
+               /* width: 240px; */
+               width: 100%;
+               column-gap: 10px;
+               /* border: 2px solid blue; */
+            }
+            .c4{
+               display: flex;
+               flex-direction: column;
+               row-gap: 20px;
+            }
+            .c4 input{
+                /* width: 200px; */
+                height: 40px;
+            }
+            .c3 img{
+                width: 70px;
+                height: 70px;
+                background-color: white;
+                padding: 15px;
+                /* margin: 1px; */
+            }
+            .c1 div{
+                display: flex;
+                /* width: 200px; */
+                width: 100%;
+                column-gap: 15px;
+            }
+            .c1{
+               display: flex;
+               flex-direction: column;
+               row-gap: 18px;
+            }
+            .c1 img{
+                height: 25px;
+                width: 18px;
+            }
+            .c2 p{
+               margin-top: 20px;  
+            }
+            .social{
+                display: flex;
+                column-gap: 20px;
+            }
+            .footer{
+                display: flex;
+                height: 80px;
+                align-items: center;
+                justify-content: center;
+
+            }
+            #line{
+                width: 900px;
+            }
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Media query for first section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    @media (max-width:750px){
+        .nav ul{
+            display: none;
+        }  
+        .icon{
+            display: none;
+        }
+        .menu{
+            display: block;
+        }
+        .container{
+            background: url("images/slider-bg.jpg") no-repeat 85%;
+            background-size: cover;         
+        }
+        .box{
+            height: 40vh;
+            margin-left: 15%;
+            width: auto;
+            align-items: center;
+        }
+    }
+    @media (max-width:900px){
+        .container{
+            background: url("images/slider-bg.jpg") no-repeat 90%;
+            background-size: cover;         
+         }
+         .box{
+            height: 37vh;
+            width:60%;
+         }
+    }
+    @media (max-width:450px){
+        .box p{
+           font-size:3vmax ;
+           margin-bottom: 20px;
+        }
+        .box h1{
+           font-size:6vmax ;
+           margin-bottom: 20px;
+        }
+        .box{
+            width: auto;
+            align-items: center;
+            margin-left: 7%;
+            height: 30vh;
+        }
+         .ctn{
+             width: auto;
+         }
+    }
+ 
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Media query for second section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    @media (max-width:1200px){
+        .feature{
+            width: 50%;
+            padding: 5vmin;
+        }
+        .second{
+            height: 400px;
+        }
+    }
+    @media (max-width:750px){
+        .feature{
+            width: 100%;
+        }
+        .second{
+            height: 700px;
+        }
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Media query for Third section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    @media (max-width:1000px){
+         .content{
+            height: 40vh;
+         }
+    }
+    @media (max-width:750px){
+        .img{
+            width:100%;
+        }
+        .content{
+            position: relative;
+            top:1vmin;
+            width: 200%;
+            padding: 5vmin;
+            height: 50vh;
+        }
+        .third{
+            height: 100vh;
+        }
+        .content button{
+            height: 8vh;
+            width: 30%;
+            display: flex;
+            align-items: center;   
+    }
+    }
+    @media(max-width:351px){
+        .img{
+            margin-top: 35px;
+        }
+        .third{
+            height: 110vh;
+        }
+    }
+ 
+      /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Media query for Fourth section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+      @media (max-width:1270px){
+           .sale{
+               margin-top: 30px;
+           }
+           .fourth{
+                height: 950px;
+           }
+      }
+      @media (max-width:833px){
+           .fourth{
+                height: 1400px;
+           }
+      }
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Media query for Fivth section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+        @media(max-width:1200px){
+            .fivth-content{
+                width: 90%;
+            }
+        }
+        
+        @media(max-width:750px){
+            .form ,.map{
+                width: 90%;
+            }
+            .fiv-con-box{
+                flex-wrap: wrap;
+                row-gap: 40px;
+            } 
+            .form{
+                height: 450px;
+                line-height: 50px;
+            }
+            .fivth{
+                height: 215vh;
+            }
+        
+
+        }
+         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Media query for seventh section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+          @media(max-width:1250px){
+            .sev-content{
+                width: 90%;
+            }
+         }
+         @media(max-width:1050px){
+            .sev-content{
+                width: 90%;
+            }
+            #line{
+                 width: 700px;
+              }
+         }
+         @media(max-width:880px){
+              .sev-content div{
+                 width: 60%;
+                }
+                .sev-content{
+                 height: 950px;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 justify-content: space-evenly;
+              }
+              .seventh{
+                  height: 950px;
+              }
+              #line{
+                 width: 450px;
+              }
+         } 
+         @media(max-width:500px){
+            #line{
+                width: 250px;
+            }
+         }
+
+
+</style>
+<body>
+  <section class="main">
+          <nav>
+               <div class="nav">
+                    <span>HANDTIME</span>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">PRODUCTS</a></li>
+                        <li><a href="">TESTIMONIAL</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>
+                    <a class="menu" href=""><i class="fa-solid fa-bars"></i></a>
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+               </div>
+          </nav>
+          <div class="container">
+                <div class="box">
+                      <h1>STYLISH WATCHES</h1>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.</p>
+                        <span>
+                         <a href="#" class="ctn" >Contact Us</a>
+                         <a href="#" class="ctn" style="background-color: #8019C8;">About Us</a>
+                      </span>
+                      
+
+                </div>
+          </div>
+  </section>
+  <section class="second">
+       <div class="feature">
+            <img src="./images/feature-1.png">
+            <h2>FAST DELIVERY</h2>
+            <p>variations of passages of Lorem Ipsum available</p>
+       </div>
+       <div class="feature">
+        <img src="./images/feature-2.png">
+        <h2>FAST SHIPING</h2>
+        <p>variations of passages of Lorem Ipsum available</p>
+       </div>
+       <div class="feature">
+        <img src="./images/feature-3.png">
+        <h2>BEST QUALITY</h2>
+        <p>variations of passages of Lorem Ipsum available</p>
+       </div>
+       <div class="feature">
+        <img src="./images/feature-4.png">
+        <h2>24*7 CUSTOMER SUPPORT</h2>
+        <p>variations of passages of Lorem Ipsum available</p>
+       </div>
+
+  </section><br><br>
+  <section class="third">
+         <div class="img">
+              <div>
+                <img src="images/a-1.jpg">
+              </div>
+               <div>
+                <img src="images/a-2.jpg">
+               </div>
+         </div>
+         <div>
+                <div class="content">
+                    <h1>About Our Shop</h1>
+                    <p>There are many variations of passages of Lorem Ipsum There are many variations of passages of Lorem Ipsum</p>
+                     <button class="btn">Read More</button>
+                </div>
+         </div>
+  </section>
+  <section class="fourth">
+      <button class="btn-heading">Top Sale Watches</button>
+      <div class="sale-watch">
+           <div class="sale">
+                <img src="images/w1.png">
+                <div class="sale-content">
+                     <div>
+                        <h3>Men's Watch</h3>
+                        <h3>$300</h3>
+                     </div>
+                     <div>
+                        <h3>Like</h3>
+                        <span><i class="fa fa-star"></i></span>
+                        <span><i class="fa fa-star"></i></span>
+                        <span><i class="fa fa-star"></i></span>
+                        <span><i class="fa fa-star"></i></span>
+                        <span><i class="fa fa-star"></i></span>
+                     </div>
+                </div>
+                <button class="btn">Add to cart</button>
+           </div>
+           <div class="sale">
+             <img src="images/w2.png">
+             <div class="sale-content">
+                <div>
+                   <h3>Men's Watch</h3>
+                   <h3>$300</h3>
+                </div>
+                <div>
+                   <h3>Like</h3>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                </div>
+           </div>
+           <button class="btn">Add to Cart</button>
+           </div>
+           <div class="sale">
+             <img src="images/w3.png">
+             <div class="sale-content">
+                <div>
+                   <h3>Men's Watch</h3>
+                   <h3>$300</h3>
+
+                </div>
+                <div>
+                   <h3>Like</h3>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                   <span><i class="fa fa-star"></i></span>
+                </div>
+           </div>
+           <button class="btn">Add to Cart</button>
+           </div>
+       
+      </div>
+  </section>
+  <br><br>
+  <section class="fourth">
+    <button class="btn-heading">Feature Watches</button>
+    <div class="sale-watch">
+         <div class="sale">
+              <img src="images/w1.png">
+              <div class="sale-content">
+                   <div>
+                      <h3>Men's Watch</h3>
+                      <h3>$300</h3>
+                   </div>
+                   <div>
+                      <h3>Like</h3>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                   </div>
+              </div>
+              <button class="btn">Add to cart</button>
+         </div>
+         <div class="sale">
+           <img src="images/w2.png">
+           <div class="sale-content">
+              <div>
+                 <h3>Men's Watch</h3>
+                 <h3>$300</h3>
+              </div>
+              <div>
+                 <h3>Like</h3>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+              </div>
+         </div>
+         <button class="btn">Add to Cart</button>
+         </div>
+         <div class="sale">
+           <img src="images/w3.png">
+           <div class="sale-content">
+              <div>
+                 <h3>Men's Watch</h3>
+                 <h3>$300</h3>
+
+              </div>
+              <div>
+                 <h3>Like</h3>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+              </div>
+         </div>
+         <button class="btn">Add to Cart</button>
+         </div>
+     
+    </div>  
+  </section>   
+  <br><br>
+  <section class="fourth">
+    <button class="btn-heading">New Arrivals</button>
+    <div class="sale-watch">
+         <div class="sale">
+              <img src="images/w1.png">
+              <div class="sale-content">
+                   <div>
+                      <h3>Men's Watch</h3>
+                      <h3>$300</h3>
+                   </div>
+                   <div>
+                      <h3>Like</h3>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                      <span><i class="fa fa-star"></i></span>
+                   </div>
+              </div>
+              <button class="btn">Add to cart</button>
+         </div>
+         <div class="sale">
+           <img src="images/w2.png">
+           <div class="sale-content">
+              <div>
+                 <h3>Men's Watch</h3>
+                 <h3>$300</h3>
+              </div>
+              <div>
+                 <h3>Like</h3>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+              </div>
+         </div>
+         <button class="btn">Add to Cart</button>
+         </div>
+         <div class="sale">
+           <img src="images/w3.png">
+           <div class="sale-content">
+              <div>
+                 <h3>Men's Watch</h3>
+                 <h3>$300</h3>
+
+              </div>
+              <div>
+                 <h3>Like</h3>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+              </div>
+         </div>
+         <button class="btn">Add to Cart</button>
+         </div>
+     
+    </div>
+
+  </section> 
+<section class="fivth">
+    <div class="fivth-content">
+        <h1>CONTACT US</h1>
+         <div class="fiv-con-box">
+               <div class="form">
+                   <input type="text" placeholder="Your Name">
+                   <input type="text" placeholder="Phone Number ">
+                   <input type="text" placeholder="Email">
+                   <input type="textarea" placeholder="Message" style="height: 120px;">
+                   <button class="btn">SEND</button>
+              </div>
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14719.327762777079!2d75.813842!3d22.7344871!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fdfb9be4c045%3A0x374c1bd39aa28226!2sLeeds%20Enclave!5e0!3m2!1sen!2sin!4v1702797649621!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+         </div>
+   </div>
+</section>
+
+<section class="seventh">
+       <h2 style=" font-size: 30px;text-align: center;">HANDTIME<p id="line" style="background-color: white;height: 1.5px;margin-top: 20px;"></p></h2>
+       <div class="sev-content">
+             <div class="c1">
+                <h2>About Shop</h2>
+                <div>
+                    <img src="./images/location.png">
+                    <span>Address</span>
+                </div>
+                <div>
+                    <img src="./images/phone.png">
+                    <span>+01 1234567890</span>
+                </div>
+                <div>
+                    <img src="./images/mail.png">
+                    <span>demo@gmail.com</span> 
+                </div>  
+             </div>   
+             <div class="c2">
+                  <h2>Informations</h2>
+                  <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+             </div>  
+             <div class="c3">
+                <h2>Instagram</h2>
+                     <div style="margin-top: 20px; ">
+                        <img src="./images/w1.png">
+                        <img src="./images/w2.png">
+                         <img src="./images/w3.png">
+                     </div><br>
+                     <div>
+                        <img src="./images/w4.png">
+                        <img src="./images/w5.png">
+                         <img src="./images/w6.png">
+                     </div>
+             </div> 
+             <div class="c4">
+                <h2>Newsletter</h2>
+                <input type="text" placeholder="Enter your email">
+                <button class="btn">SUBSCRIBE</button>
+                <div class="social">
+                    <img src="./images/fb.png">
+                    <img src="./images/twitter.png">
+                    <img src="./images/linkedin.png">
+                    <img src="./images/youtube.png">
+                </div>
+             </div> 
+       </div>
+</section>
+<div class="footer">
+    <p>© 2023 All Rights Reserved By Free Html Templates</p>
+</div>
+</body>
+</html>
